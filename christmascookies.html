@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Christmas Cookies</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+ <body>
+     
+<div class="snowflakes" aria-hidden="true">
+  <div class="snowflake">
+  ❅
+  </div>
+  <div class="snowflake">
+  ❅
+  </div>
+  <div class="snowflake">
+  ❆
+  </div>
+  <div class="snowflake">
+  ❄
+  </div>
+  <div class="snowflake">
+  ❅
+  </div>
+  <div class="snowflake">
+  ❆
+  </div>
+  <div class="snowflake">
+  ❄
+  </div>
+  <div class="snowflake">
+  ❅
+  </div>
+  <div class="snowflake">
+  ❆
+  </div>
+  <div class="snowflake">
+  ❄
+  </div>
+</div>
+    <section>
+      <div class="circle"></div>
+       <div class="circle2"></div>
+        <header>
+          <a href="#" class="logo"> <img src="wreath_2_130x130.png" /> 
+            <span><h6>COOKIE CRUMBLES</h6></span>
+        </a>
+        
+          <div class="toggle" onclick="toggleMenu();"></div>
+          
+          <ul class="navigation">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">Custom Orders</a></li>
+            <li><a href="#">Bulk Orders</a></li>
+            <li><a href="#">Contact </a></li>
+          </ul>
+        </header>
+        
+        <div class="content">
+          <div class="text-box">
+            <h2>
+              That's just how the <br />
+              <span>Cookie Crumbles</span>
+            </h2>
+            <p>
+             Why did the baker go home sick? He tossed his cookies at work.
+What does the Gingerbread Man use to make his bed? Cookie sheets!
+Why did the cookie go to the doctor? He was feeling crummy. 
+              
+              <br><br>
+              Don't mind the random cookie jokes- I found those online. I love Christmas and had a blast making this! Too red? ...Nah!
+            Shoutout to Online Tutorials Starbucks YT vid for inspiration and codeconvey on Codepen for snowflakes! Coded by Diamond Kelley.
+               
+            </p>
+            <!-- <hr> -->
+            <a href="#"> Become a cookie crumbler today! Sign up for our merry newsletter 🎄</a>
+             <form>
+  <div class="form-group">
+      <input type="text" placeholder="Name 🍪" class="info"> <br><br>
+      <input type="text" placeholder="Email 🍪" class="info" autocomplete="off"> <br><br>
+      <input type="submit" value=" JOIN🍪" class="submit">
+    </div>
+</form>
+          </div>
+
+         
+
+
+          <div class="image-box"><img src="gingerbread.png" class="gingerbread" /></div>
+        </div>
+      </div>
+      <ul class="thumb">
+        <li><img src="gingerbread.png" onclick="imgSlider('gingerbread.png'); changeCircleColor('#165b33')"/></li>
+        <li><img src="snowflakecookie.png" onclick="imgSlider('snowflakecookie.png'); changeCircleColor('#165b33')"/></li>
+        <li><img src="treecookie.png" onclick="imgSlider('treecookie.png'); changeCircleColor('#165b33')" /></li>
+        <li><img src="bellcookie.png" onclick="imgSlider('bellcookie.png'); changeCircleColor('#165b33')" /></li>
+      </ul>
+
+      <ul class="socials">
+        <li>
+          <a href="#"><img src="facebook.png" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="twitter.png" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="instagram.png" /></a>
+        </li>
+      </ul>
+    </section>
+
+    <script type="text/javascript">
+      function imgSlider(anything) {
+        document.querySelector ('.gingerbread').src =anything;
+      }
+
+      function changeCircleColor(color){
+        const circle = document.querySelector('.circle');
+        circle.style.background = color;
+      }
+      function toggleMenu() {
+        const menuToggle = document.querySelector('.toggle');
+        const navigation = document.querySelector('.navigation');
+        menuToggle.classList.toggle('active');
+        navigation.classList.toggle('active')
+      }
+
+      document.querySelector('.submit').addEventListener('click', function() {
+        let name = prompt('Welcome festive friend! What is your name?');
+        let question =prompt('Are you here because you love Christmas cookies?')
+        if (name.length=== 0) {
+            alert(`No need to be afraid to share your name...we're soft as dough and sweet as sugar here!`)
+        }
+        
+        if (question === "yes"||question==="yas"||question==="for sure"||question==="totally")  {
+          alert(`Wonderful news that you love cookies ${name}! We love them too! Thanks for joining the Cookie Crumblers!`)
+        } else {
+          alert(`Uh-Oh! That's too bad about the cookies. We still may have something you'll enjoy this holiday season!`)
+        }
+      }); 
+    </script>
+  </body>
+</html>
